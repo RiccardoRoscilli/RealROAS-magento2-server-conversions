@@ -1,5 +1,5 @@
 {
-    "name": "realroas/magento2-server-conversions",
+    "name": "pwsmage/magento2-server-conversions",
     "description": "Free server-side conversions module for Magento 2. Sends purchase events via API to Google Ads, Meta (Facebook/Instagram), TikTok, and Pinterest. Works alongside your existing tracking.",
     "type": "magento2-module",
     "version": "1.0.0",
@@ -34,7 +34,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "RealROAS\\ServerConversions\\": ""
+            "Pwsmage\\ServerConversions\\": ""
         }
     }
 }

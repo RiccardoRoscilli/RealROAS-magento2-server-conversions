@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="RealROAS_ServerConversions::config" title="RealROAS Server Conversions" sortOrder="100"/>
+                            <resource id="Pwsmage_ServerConversions::config" title="RealROAS Server Conversions" sortOrder="100"/>
                         </resource>
                     </resource>
                 </resource>

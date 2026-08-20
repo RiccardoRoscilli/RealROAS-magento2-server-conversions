@@ -2,14 +2,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <!-- Save tracking data onto order before persistence -->
     <event name="sales_order_place_before">
-        <observer name="realroas_save_tracking_data" instance="RealROAS\ServerConversions\Observer\SaveTrackingData"/>
+        <observer name="realroas_save_tracking_data" instance="Pwsmage\ServerConversions\Observer\SaveTrackingData"/>
     </event>
     <!-- Send conversions when order status changes -->
     <event name="sales_order_save_after">
-        <observer name="realroas_send_google_conversion" instance="RealROAS\ServerConversions\Observer\SendGoogleConversion"/>
-        <observer name="realroas_send_meta_conversion" instance="RealROAS\ServerConversions\Observer\SendMetaConversion"/>
-        <observer name="realroas_send_tiktok_conversion" instance="RealROAS\ServerConversions\Observer\SendTikTokConversion"/>
-        <observer name="realroas_send_pinterest_conversion" instance="RealROAS\ServerConversions\Observer\SendPinterestConversion"/>
-        <observer name="realroas_send_realroas_data" instance="RealROAS\ServerConversions\Observer\SendToRealROAS"/>
+        <observer name="realroas_send_google_conversion" instance="Pwsmage\ServerConversions\Observer\SendGoogleConversion"/>
+        <observer name="realroas_send_meta_conversion" instance="Pwsmage\ServerConversions\Observer\SendMetaConversion"/>
+        <observer name="realroas_send_tiktok_conversion" instance="Pwsmage\ServerConversions\Observer\SendTikTokConversion"/>
+        <observer name="realroas_send_pinterest_conversion" instance="Pwsmage\ServerConversions\Observer\SendPinterestConversion"/>
+        <observer name="realroas_send_realroas_data" instance="Pwsmage\ServerConversions\Observer\SendToRealROAS"/>
     </event>
 </config>

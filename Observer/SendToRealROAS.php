@@ -1,6 +1,6 @@
 <?php
 
-namespace RealROAS\ServerConversions\Observer;
+namespace Pwsmage\ServerConversions\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
