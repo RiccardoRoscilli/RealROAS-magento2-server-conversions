@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_order" resource="sales" comment="Sales Order">
+        <!-- Click IDs -->
+        <column xsi:type="varchar" name="gclid" nullable="true" length="255" comment="Google Click ID"/>
+        <column xsi:type="varchar" name="gclid_timestamp" nullable="true" length="50" comment="Gclid Capture Timestamp"/>
+        <column xsi:type="text" name="user_agent" nullable="true" comment="Visitor User Agent"/>
+        <column xsi:type="varchar" name="client_ip" nullable="true" length="45" comment="Visitor IP"/>
+        <column xsi:type="varchar" name="meta_fbc" nullable="true" length="255" comment="Meta FBC (Facebook Click)"/>
+        <column xsi:type="varchar" name="meta_fbp" nullable="true" length="255" comment="Meta FBP (Facebook Browser)"/>
+        <column xsi:type="varchar" name="ttclid" nullable="true" length="255" comment="TikTok Click ID"/>
+        <column xsi:type="varchar" name="epik" nullable="true" length="255" comment="Pinterest Click ID"/>
+
+        <!-- UTM Parameters -->
+        <column xsi:type="varchar" name="utm_source" nullable="true" length="255" comment="UTM Source"/>
+        <column xsi:type="varchar" name="utm_medium" nullable="true" length="255" comment="UTM Medium"/>
+        <column xsi:type="varchar" name="utm_campaign" nullable="true" length="255" comment="UTM Campaign"/>
+        <column xsi:type="varchar" name="utm_content" nullable="true" length="255" comment="UTM Content"/>
+        <column xsi:type="varchar" name="utm_term" nullable="true" length="255" comment="UTM Term"/>
+
+        <!-- Conversion sent flags -->
+        <column xsi:type="smallint" name="google_conversion_sent" nullable="true" default="0" comment="Google Conversion Sent"/>
+        <column xsi:type="smallint" name="meta_conversion_sent" nullable="true" default="0" comment="Meta Conversion Sent"/>
+        <column xsi:type="smallint" name="tiktok_conversion_sent" nullable="true" default="0" comment="TikTok Conversion Sent"/>
+    </table>
+</schema>

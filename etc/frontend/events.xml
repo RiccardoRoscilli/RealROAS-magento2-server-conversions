@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Capture click IDs and UTM params on every page load -->
+    <event name="controller_action_predispatch">
+        <observer name="realroas_capture_tracking" instance="RealROAS\ServerConversions\Observer\CaptureTracking"/>
+    </event>
+</config>

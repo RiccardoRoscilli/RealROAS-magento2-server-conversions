@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <realroas_server_conversions>
+            <general>
+                <enabled>0</enabled>
+            </general>
+            <meta>
+                <enabled>0</enabled>
+            </meta>
+            <tiktok>
+                <enabled>0</enabled>
+            </tiktok>
+            <pinterest>
+                <enabled>0</enabled>
+            </pinterest>
+            <realroas>
+                <enabled>0</enabled>
+            </realroas>
+        </realroas_server_conversions>
+    </default>
+</config>

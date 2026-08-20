@@ -1,0 +1,40 @@
+{
+    "name": "realroas/magento2-server-conversions",
+    "description": "Free server-side conversions module for Magento 2. Sends purchase events via API to Google Ads, Meta (Facebook/Instagram), TikTok, and Pinterest. Works alongside your existing tracking.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "homepage": "https://realroas.net/en/modules/magento2",
+    "keywords": [
+        "magento2",
+        "server-side",
+        "conversions",
+        "google-ads",
+        "meta",
+        "facebook",
+        "tiktok",
+        "pinterest",
+        "capi",
+        "tracking",
+        "roas"
+    ],
+    "authors": [
+        {
+            "name": "RealROAS by PWS",
+            "email": "support@realroas.net",
+            "homepage": "https://realroas.net"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": ">=103.0.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "RealROAS\\ServerConversions\\": ""
+        }
+    }
+}

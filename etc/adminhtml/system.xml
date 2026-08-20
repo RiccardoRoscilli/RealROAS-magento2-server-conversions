@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="realroas" translate="label" sortOrder="400">
+            <label>RealROAS</label>
+        </tab>
+        <section id="realroas_server_conversions" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Server-Side Conversions</label>
+            <tab>realroas</tab>
+            <resource>RealROAS_ServerConversions::config</resource>
+
+            <!-- Google Ads -->
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google Ads (Data Manager API)</label>
+                <comment><![CDATA[Send purchase conversions to Google Ads via server-side API. Works alongside your existing Google Tag.]]></comment>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customer_id" translate="label comment" type="text" sortOrder="20" showInDefault="1">
+                    <label>Customer ID (no dashes)</label>
+                    <comment>e.g. 1234567890 — find in Google Ads top-right corner</comment>
+                </field>
+                <field id="conversion_action_id" translate="label comment" type="text" sortOrder="30" showInDefault="1">
+                    <label>Conversion Action ID</label>
+                    <comment>Google Ads → Tools → Conversions → your action → ID in URL</comment>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="50" showInDefault="1">
+                    <label>OAuth Client ID</label>
+                </field>
+                <field id="client_secret" translate="label" type="obscure" sortOrder="60" showInDefault="1">
+                    <label>OAuth Client Secret</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="refresh_token" translate="label" type="obscure" sortOrder="70" showInDefault="1">
+                    <label>OAuth Refresh Token</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+            </group>
+
+            <!-- Meta -->
+            <group id="meta" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Meta (Facebook/Instagram) Conversions API</label>
+                <comment><![CDATA[Send purchase events to Meta CAPI. Works alongside your existing Meta Pixel — events are deduplicated automatically.]]></comment>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pixel_id" translate="label comment" type="text" sortOrder="20" showInDefault="1">
+                    <label>Pixel ID</label>
+                    <comment>Meta Events Manager → your pixel → Settings</comment>
+                </field>
+                <field id="access_token" translate="label comment" type="obscure" sortOrder="30" showInDefault="1">
+                    <label>Conversions API Access Token</label>
+                    <comment>Events Manager → Settings → Generate Access Token</comment>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+            </group>
+
+            <!-- TikTok -->
+            <group id="tiktok" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>TikTok Events API</label>
+                <comment><![CDATA[Send purchase events to TikTok. Works alongside your existing TikTok Pixel.]]></comment>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="pixel_id" translate="label comment" type="text" sortOrder="20" showInDefault="1">
+                    <label>Pixel ID</label>
+                    <comment>TikTok Ads Manager → Assets → Events</comment>
+                </field>
+                <field id="access_token" translate="label" type="obscure" sortOrder="30" showInDefault="1">
+                    <label>Access Token</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+            </group>
+
+            <!-- RealROAS Dashboard (optional) -->
+            <group id="realroas" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>RealROAS Dashboard (Optional)</label>
+                <comment><![CDATA[Send order and visit data to RealROAS dashboard for true ROAS calculation. Requires a <a href="https://realroas.net/en/pricing" target="_blank">RealROAS subscription</a>.]]></comment>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="api_key" translate="label comment" type="obscure" sortOrder="20" showInDefault="1">
+                    <label>Store API Key</label>
+                    <comment>Get your API key from RealROAS dashboard → Stores</comment>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="api_url" translate="label" type="text" sortOrder="30" showInDefault="1">
+                    <label>API URL</label>
+                    <comment>Default: https://realroas.net/api/v1</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
