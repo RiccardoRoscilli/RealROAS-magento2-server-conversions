@@ -9,6 +9,7 @@
         <observer name="realroas_send_google_conversion" instance="RealROAS\ServerConversions\Observer\SendGoogleConversion"/>
         <observer name="realroas_send_meta_conversion" instance="RealROAS\ServerConversions\Observer\SendMetaConversion"/>
         <observer name="realroas_send_tiktok_conversion" instance="RealROAS\ServerConversions\Observer\SendTikTokConversion"/>
+        <observer name="realroas_send_pinterest_conversion" instance="RealROAS\ServerConversions\Observer\SendPinterestConversion"/>
         <observer name="realroas_send_realroas_data" instance="RealROAS\ServerConversions\Observer\SendToRealROAS"/>
     </event>
 </config>

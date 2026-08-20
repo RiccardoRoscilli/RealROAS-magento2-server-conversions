@@ -22,5 +22,6 @@
         <column xsi:type="smallint" name="google_conversion_sent" nullable="true" default="0" comment="Google Conversion Sent"/>
         <column xsi:type="smallint" name="meta_conversion_sent" nullable="true" default="0" comment="Meta Conversion Sent"/>
         <column xsi:type="smallint" name="tiktok_conversion_sent" nullable="true" default="0" comment="TikTok Conversion Sent"/>
+        <column xsi:type="smallint" name="pinterest_conversion_sent" nullable="true" default="0" comment="Pinterest Conversion Sent"/>
     </table>
 </schema>
